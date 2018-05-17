@@ -3,7 +3,9 @@
 ## 1、OpenGL中的坐标系统 ##
   
 OpenGL中的三维坐标系统如下：
+
 ![coordinate](https://learnopengl-cn.github.io/img/01/08/coordinate_systems_right_handed.png )
+
 需要注意的是：
 x、y、z轴的顺序和正常顺序有所不同，但都是 **右手系**；
 OpenGL的有效顶点是x、y、z轴坐标都在 __[-1.0,1.0]__ 之间的数据。
@@ -11,6 +13,7 @@ OpenGL的有效顶点是x、y、z轴坐标都在 __[-1.0,1.0]__ 之间的数据�
 ## 2、OpenGL中的顶点输入 ##
   
 OpenGL中通过 **顶点缓冲数组**（Vertex Buffer Objects, VBO）一次性将大批顶点数据发送到显卡上。这种方式要求我们在存储顶点数据时就要使用 **地址连续** 的数组。顶点缓冲数据会被解析为下面这样子：
+
 ![vertices](https://learnopengl-cn.github.io/img/01/04/vertex_attribute_pointer.png )
   
 ## 3、目前绘制的实现方式 ##
@@ -28,10 +31,13 @@ st->op1->op2->op3->op4->e
   
 ```
 目前绘制的思路主要参考绘制球体的流程：
+
 ![](sphere.bmp?0.7034586308277042 )  
 ![](sphere_line.bmp?0.6278307409621533 )  
+
 在眼球彩超重建中，初步认为不同彩超图片类似于球体在经度方向切片,绘制时类似于在纬度方向绘制三角形带。
 三角形剖分时选择最临近的三个顶点组成三角形：
+
 ![](triangulation.png?0.6261398235197682 )  
   
 ## 4、尚未完成的工作 ##
